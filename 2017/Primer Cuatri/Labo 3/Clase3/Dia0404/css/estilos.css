@@ -1,0 +1,80 @@
+h1,h2
+    {
+        color:yellow;
+        font-family:Arial, Helvetica, sans-serif;
+        font-size: 60px;
+        font-style:italic;
+        font-weight: 700;
+        background-color: coral;
+        text-align: center;
+        text-decoration: underline;
+        /*letter-spacing: 35px;*/
+         word-spacing: 35px;
+         text-transform: uppercase;
+         border-width: 3px;
+         border-color: brown;
+         border-style: dashed;
+         padding: 30px;
+         margin: 30px;
+         
+    }
+/*crtl + space para ver opciones*/
+
+/*refiere a parrafo seguido de h1*/
+h1 + p
+{
+    color:yellow;
+}
+
+p:hover
+{
+    background-color:green;
+}
+
+textarea:focus
+{
+    background-color: black;
+}
+
+a:active
+{
+    background-color: deeppink;
+}
+a:visited
+{
+    color: red;
+}
+/*parrafo q le sigue a otro parrafo*/
+p~p
+{
+    color:chocolate;
+}
+
+    body
+    {
+        background-image: url(Images/Desert.jpg);
+    }
+
+/*clase*/
+    .vistoso
+{
+    background-color: chartreuse;
+    color:blue;
+}
+/* llamo al ID */
+
+#parrafoEspecial
+{
+    color:green;
+}
+
+
+p span
+{
+    color:red;
+}
+
+div span
+{
+    color:aqua;
+}

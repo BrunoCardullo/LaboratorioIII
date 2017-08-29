@@ -1,0 +1,5 @@
+Nombre: Diego. - Apellido: Bogado. - Dni: 38578454. - Sexo: Femenino.Legajo: 102524. - Sueldo: 9000. <br>
+Nombre: Jorge. - Apellido: Gattari. - Dni: 25454456. - Sexo: Masculino.Legajo: 578445. - Sueldo: 35000. <br>
+Nombre: . - Apellido: Roberto. - Dni: . - Sexo: .Legajo: . - Sueldo: . <br>
+Nombre: Roberto. - Apellido: Perez. - Dni: 789789789. - Sexo: Femenino.Legajo: 123456. - Sueldo: 1234332. <br>
+Nombre: Juan. - Apellido: Perez. - Dni: 385789. - Sexo: Masculino.Legajo: 545554. - Sueldo: 235645. <br>
