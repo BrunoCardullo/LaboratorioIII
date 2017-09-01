@@ -1,0 +1,27 @@
+input
+{
+    margin: 1%;
+    width: 12%;
+}
+
+button
+{
+    margin: 1%;
+    width: 6%;
+    height: 3%;
+    background-color:darkgreen;
+    border-radius: 5px;
+}
+.guardar
+{
+    color: white;
+}
+div
+{
+    background-color: darkgoldenrod;
+    width: 50%;
+}
+.datos
+{
+    margin: 1%;
+}
