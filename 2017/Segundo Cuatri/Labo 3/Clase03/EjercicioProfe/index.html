@@ -16,14 +16,29 @@
     <br>
     <input type="text" placeholder="Tu apellido.." name="apellido" id="apellido">
     <br><br>
-    <button name="btnGuardar" id="btnGuardar"><label class="guardar">Guardar</label></button>
-<br><br>
+    <input type="button" value ="Guardar"name="btnGuardar" id="btnGuardar" onclick="Validar()"></input>
+<br>
 </div>
-    <table> 
-        <h2>Lista de personas</h2>
-        <th>Nombre</th>
-        <th>Apellido</th>
-        <th>Accion</th>
+    <table id="tabla"> 
+        <thead>
+            <h2>Lista de personas</h2>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Accion</th>
+        </thead>
+
+        <tbody id="tCuerpo"> 
+            <tr>
+                <td>Peter</td>
+                <td>Griffin</td>
+                <td><a href=''>borrar</a></td>
+            </tr>
+            <tr>
+                <td>Lois</td>
+                <td>Griffin</td>
+                <td><a href=''>borrar</a></td>
+            </tr>
+        </tbody>
     </table>
 </body>
 </html>

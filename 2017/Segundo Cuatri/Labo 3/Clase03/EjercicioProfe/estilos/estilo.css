@@ -1,27 +1,55 @@
-input
+input[type ="text"]
 {
-    margin: 1%;
-    width: 12%;
+    margin: 8px 8px;
+    padding: 12px 20px;
+    width: 90%;
+    border-radius: 8px;
+    
 }
 
-button
+table
 {
-    margin: 1%;
-    width: 6%;
-    height: 3%;
+    border-collapse: collapse;
+    width: 100%;
+}
+input[type="button"]
+{
+    margin: 8px;
+    width:50%;
     background-color:darkgreen;
     border-radius: 5px;
-}
-.guardar
-{
     color: white;
+    padding: 14px 20px;
+
 }
+
+th, td
+{
+    text-align: left;
+    padding: 8px;
+}
+input[type="button"]:hover
+{
+    background-color: #45a049;
+}
+
 div
 {
     background-color: darkgoldenrod;
     width: 50%;
+    border-radius: 5px;
+    padding: 20px;
 }
 .datos
 {
     margin: 1%;
+}
+
+.sinError
+{
+    border: 1px solid #ccc;
+}
+.error
+{
+    border: 1px solid red;
 }
