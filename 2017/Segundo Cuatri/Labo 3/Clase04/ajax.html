@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script>
+        
+        var xmlHttp = new XMLHttpRequest();
+        var callback = function(){
+            if(xmlHttp.readyState == 4){
+                if(xmlHttp.status == 200){
+                    if(xmlHttp.response){
+                        alert("Logueado");
+                    } else {
+                        alert("Incorrecto");
+                    }
+                }
+            }
+        }
+        
+        function sendUsrAndPass(usr, pass){
+            xmlHttp.onreadystatechange = callback;
+            
+            xmlHttp.open("POST", "http://localhost:3000/loginUsuario", true);
+            //xmlHttp.open("GET", "http://localhost:3000/loginUsuario?usr="+usr+"&pass="+pass+"", true);
+            xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlenconded");
+            xmlHttp.send("usr=usuario&pas=1234");
+        }
+
+        function post()
+        {
+            var usr = $("#usr").val();
+            var pass = $("#pass").val();
+            if(usr != "" && pass != ""){
+                sendUsrAndPass(usr, pass);
+            } else {
+                alert("Ingresá todos los datos");
+            }
+        }
+
+    </script>
+
+</head>
+<body>
+    Usuario <br>
+    <input type="text" id="usr"/> <br>
+    Contraseña <br>
+    <input type="text" id="pass"/> <br>
+    <input type="button" onclick="post()" value="Enviar"/>
+</body>
+</html>

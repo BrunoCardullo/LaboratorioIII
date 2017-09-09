@@ -1,0 +1,78 @@
+<html>
+<head>
+    <script type="text/javascript">
+
+    var xmlHttp = new XMLHttpRequest(); //Nexo entre cliente servidor
+    var callback = function()
+    {
+        console.log("Todavia no llego nada")
+        if(xmlHttp.readyState == 4)
+        {
+            if(xmlHttp.status == 200)
+            {
+                if(xmlHttp.response)
+                console.log("Logueado");
+                else alert("Falta completar campos!!!");
+                //console.log(xmlHttp.response);
+
+            }
+        }
+    }
+
+    function PeticionGet(usr,pass)
+    {
+        xmlHttp.onreadystatechange = callback; //cuando cambie el estado de la respuesta 
+        xmlHttp.open("GET", "http://localhost:3000/loginUsuario", true);
+        //xmlHttp.open("GET", "http://localhost:3000/loginUsuario?usr="+usr+"&pass="+pass+"", true);
+        xmlHttp.setRequestHeader("Content-type", "x-www-form-urlenconded");
+        xmlHttp.send("usr=usuario&pass=1234"); 
+    }
+
+window.onload = PeticionGet;
+
+/*function()
+{
+    alert("a");
+}    */
+function post()
+        {
+            var usr = $("#usr").val();
+            var pass = $("#pass").val();
+            if(usr != "" && pass != ""){
+                PeticionGet(usr, pass);
+            } else {
+                alert("Ingresá todos los datos");
+            }
+        }
+
+    function MostrarMensaje()
+    {
+        var usuario = document.getElementById("usuario");
+        alert(usuario.value);
+    }
+
+    function Limpiar()
+    {
+        document.getElementById("usuario").value = "";
+        document.getElementById("pass").value = "";
+    }
+
+    //console.log("algo");
+    </script>
+</head>
+<body>
+    <label id="Login">Login</label><br>
+
+    <label id="nombre">Usuario:</label><br>
+
+    <input type="text" id="usuario"> <br>
+
+    <label id="password">Contraseña:</label><br>
+    <input type="password" name="pass" id="pass"> <br>
+    <input type="checkbox" name="recordarDatos" id="recordarDatos">Recordar Usuario y Contraseña <br>
+
+    <input type="button" name="Enviar" id="Enviar" value="Enviar" onclick="post()">
+    <input type="button" name="Limpiar" id="Limpiar" value="Limpiar" onclick="Limpiar()">
+
+</body>
+</html>
